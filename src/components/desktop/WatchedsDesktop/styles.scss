@@ -1,0 +1,78 @@
+@import "../../../styles/imports.scss";
+
+@include for-phone-only {
+  .cotainer-WatchedsDesktop {
+    display: none;
+  }
+}
+@include for-tablet-portrait-up {
+  .cotainer-WatchedsDesktop {
+    display: none;
+  }
+}
+
+@include for-tablet-landscape-up {
+  .cotainer-WatchedsDesktop {
+    display: none;
+  }
+}
+@include for-desktop-up {
+  .cotainer-WatchedsDesktop {
+    display: flex;
+    flex-direction: column;
+    .cotainer-WatchedsDesktop-relative {
+      position: relative;
+      display: flex;
+
+      .cotainer-WatchedsDesktop-overflowX {
+        display: flex;
+        gap: 10px;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+      .container-WatchedsDesktop-relative-arrowLeft {
+        position: absolute;
+        height: 92%;
+        width: 30px;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        svg {
+          width: 25px;
+          height: 25px;
+          color: $white;
+          cursor: pointer;
+        }
+      }
+      .container-WatchedsDesktop-relative-arrowRight {
+        position: absolute;
+        height: 92%;
+        width: 30px;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        right: 0;
+        svg {
+          width: 25px;
+          height: 25px;
+          color: $white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+/*
+    display: flex;
+    flex-direction: column;
+*/

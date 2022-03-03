@@ -1,13 +1,72 @@
 @import "../../../styles/imports.scss";
 
 @include for-tablet-landscape-up {
-  .container-desktop-watched {
+  .container-desktop-watchedFilms {
     display: none;
   }
 }
 
 @include for-desktop-up {
-  .container-desktop-watched {
+  .container-desktop-watchedFilms {
     display: flex;
+    flex-direction: column;
+    background-color: $gray800;
+    border-radius: 5px;
+    .container-desktop-watchedFilms- {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .container-desktop-watchedFilms-image {
+        img {
+          height: 350px;
+          border-top-right-radius: 5px;
+          border-top-left-radius: 5px;
+        }
+      }
+      .container-desktop-watchedFilms-palyer {
+        position: absolute;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $white;
+        svg {
+          width: 25px;
+          height: 25px;
+          color: $white;
+        }
+      }
+      .container-desktop-watchedFilms-time {
+        margin-top: -38px;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        font-size: 18px;
+      }
+    }
+    .watched-films-desktop-progressiveBar {
+      width: 100%;
+      height: 5px;
+      background-color: $gray700;
+    }
+    .watched-films-desktop-container-svg {
+      display: flex;
+      justify-content: space-between;
+      color: $white;
+      padding: $padding6 $padding12;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 }
