@@ -1,0 +1,126 @@
+@import "../../../styles/imports.scss";
+
+@include for-phone-only {
+  .container-header-desktop {
+    display: none;
+  }
+}
+@include for-tablet-portrait-up {
+  .container-header-desktop {
+    display: none;
+  }
+}
+@include for-desktop-up {
+  .container-header-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $padding12 $padding20;
+    color: $white;
+    .header-desktop-subContainer {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      .header-desktop-container-title {
+        .header-desktop-title {
+          color: $red500;
+          display: flex;
+          align-items: flex-start;
+          letter-spacing: -1px;
+          font-size: 23 px;
+          .effect-netflix {
+            font-size: 22px;
+            .effect-netflix-second {
+              font-size: 21px;
+            }
+          }
+        }
+      }
+      .header-desktop-navigation {
+        ul {
+          display: flex;
+          list-style: none;
+          font-size: 14px;
+          gap: 20px;
+          li {
+            a {
+              transition: filter 0.2s;
+              &:hover {
+                filter: brightness(0.8);
+              }
+            }
+          }
+        }
+      }
+    }
+    .header-desktop-secondContainer {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+
+      .container-desktop-search {
+        form {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          div {
+            .inputhidden {
+              visibility: hidden;
+            }
+            display: flex;
+            align-items: center;
+          }
+          .box-shadow-search {
+            box-shadow: 0 0 0 1px $red500;
+            border-radius: 3px;
+            display: flex;
+            justify-content: space-between;
+            input {
+              width: 200px;
+              height: 30px;
+              border: none;
+              outline: none;
+              padding: 5px 8px;
+              font-size: 16px;
+              background-color: transparent;
+              color: $white;
+            }
+            button {
+              padding: $padding4;
+              height: 30px;
+              background-color: transparent;
+              border: none;
+              color: $white;
+            }
+          }
+          .toggleClass {
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+      .header-desktop-user {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        .header-desktop-userIcons {
+          display: flex;
+          align-items: center;
+          .header-desktop-userProfile {
+            background-color: $blue400;
+            border-radius: 10px;
+            padding: $padding2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

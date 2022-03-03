@@ -1,0 +1,15 @@
+@import "../../../styles/imports.scss";
+
+@include for-phone-only {
+  .containerWatched {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@include for-tablet-portrait-up {
+  .containerWatched {
+    display: none;
+  }
+}

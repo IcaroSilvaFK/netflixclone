@@ -1,0 +1,77 @@
+@import "../../../styles/imports.scss";
+
+@include for-phone-only {
+  .row-watched {
+    position: relative;
+    width: 130px;
+    border-radius: 5px;
+    background-color: $gray900;
+    .row-container-relative {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      img {
+        width: 130px;
+        height: 200px;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+      }
+      .row-absolute {
+        height: 50%;
+        width: 100%;
+
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .row-text-time {
+          display: flex;
+          flex-shrink: 1;
+          align-items: flex-end;
+          justify-content: center;
+          width: 100%;
+          background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.1)
+          );
+        }
+
+        .row-container-svg-play {
+          background-color: rgba(0, 0, 0, 0.6);
+          padding: $padding10;
+          border-radius: 50%;
+          border: 1px solid $white;
+
+          display: flex;
+
+          justify-content: center;
+          align-items: center;
+          svg {
+            color: $white;
+
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+    .row-progressive-bar {
+      position: relative;
+      background-color: $gray500;
+      width: 100%;
+      height: 5px;
+    }
+    .row-icons-svg {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

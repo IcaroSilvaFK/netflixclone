@@ -1,0 +1,29 @@
+@import "./imports.scss";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body,
+a,
+input,
+button {
+  font-family: $fontFira;
+}
+
+button {
+  cursor: pointer;
+}

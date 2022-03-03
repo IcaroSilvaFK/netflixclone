@@ -1,0 +1,20 @@
+@import "../../../styles/imports.scss";
+
+@include for-tablet-landscape-up {
+  .container-desktop-sectionFilms {
+    display: none;
+  }
+}
+
+@include for-desktop-up {
+  .container-desktop-sectionFilms {
+    display: flex;
+    div {
+      img {
+        height: 250px;
+        width: 150px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

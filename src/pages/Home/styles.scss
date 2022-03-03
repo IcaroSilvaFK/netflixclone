@@ -1,0 +1,58 @@
+@import "../../styles/imports.scss";
+
+@include for-phone-only {
+  .containerHome {
+    width: 100%;
+
+    background-color: $black;
+    color: $white;
+    .container-Image-Home {
+      width: 100%;
+      height: 500px;
+      background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwomansera.com%2Fwp-content%2Fuploads%2F2021%2F06%2Fthe-witcher-season-2-1200.jpg&f=1&nofb=1");
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      align-items: flex-end;
+    }
+    main {
+      .section-films {
+        section {
+          .section-images {
+            display: flex;
+            overflow-x: scroll;
+            gap: 5px;
+            @include smothScrollAndNoDispalyScroll;
+            img {
+              width: 130px;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+      .watched-Container {
+        margin-top: 10px;
+
+        .watched-row-container {
+          display: flex;
+          overflow-x: scroll;
+          gap: 5px;
+          @include smothScrollAndNoDispalyScroll;
+        }
+      }
+    }
+  }
+}
+
+@include for-desktop-up {
+  .containerHome {
+    background-color: $gray900;
+    .container-Image-Home {
+      main {
+        .section-images {
+          display: flex;
+        }
+      }
+    }
+  }
+}

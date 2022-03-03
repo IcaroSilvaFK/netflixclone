@@ -1,0 +1,73 @@
+@import "../../../styles/imports.scss";
+@include for-phone-only {
+  .container-desktop-images {
+    display: none;
+  }
+}
+
+@include for-tablet-landscape-up {
+  .container-desktop-images {
+    display: none;
+  }
+}
+
+@include for-desktop-up {
+  .container-desktop-images {
+    display: flex;
+
+    flex-direction: column;
+    .container-desktop-images-title {
+      h3 {
+        color: $white;
+        padding: $padding6 0;
+      }
+    }
+    .container-desktop-images-move {
+      display: flex;
+      position: relative;
+      .none {
+        display: none;
+      }
+      .container-desktop-images-scroll-left {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        width: 30px;
+        background-color: rgba(0, 0, 0, 0.2);
+        svg {
+          width: 25px;
+          height: 25px;
+          color: $white;
+          cursor: pointer;
+        }
+      }
+      .container-desktop-images-scroll-right {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        width: 30px;
+        background-color: rgba(0, 0, 0, 0.2);
+        right: 0;
+        svg {
+          width: 25px;
+          height: 25px;
+          color: $white;
+          cursor: pointer;
+        }
+      }
+      .container-desktop-images-scroll {
+        display: flex;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: x proximity;
+        gap: 10px;
+        scroll-snap-align: start;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  }
+}

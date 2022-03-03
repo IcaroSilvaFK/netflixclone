@@ -1,0 +1,81 @@
+@import "../../../styles/imports.scss";
+
+@include for-phone-only {
+  .container-desktop-cardTitle {
+    display: none;
+  }
+}
+@include for-tablet-landscape-up {
+  .container-desktop-cardTitle {
+    display: none;
+  }
+}
+
+@include for-desktop-up {
+  .container-desktop-cardTitle {
+    display: flex;
+    width: 100%;
+    .container-desktop-cardTitle-image {
+      background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwomansera.com%2Fwp-content%2Fuploads%2F2021%2F06%2Fthe-witcher-season-2-1200.jpg&f=1&nofb=1");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 550px;
+      width: 100%;
+      box-shadow: inset 0 0 50px 20px #000;
+      .container-desktop-cardTitle-text {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        padding: $padding14;
+        .container-desktop-cardTitle-text-title {
+          h3 {
+            color: $white;
+            font-size: 22px;
+            display: inline;
+          }
+          span {
+            color: $gray100;
+          }
+          h1 {
+            color: $white;
+            letter-spacing: 5px;
+            font-size: 40px;
+          }
+        }
+        .container-desktop-cardTitle-text-description {
+          width: 450px;
+          color: $white;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        .container-desktop-cardTitle-text-buttons {
+          display: flex;
+          margin-top: 20px;
+          gap: 50px;
+          button {
+            height: 30px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            gap: 12px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: $white;
+            svg {
+              width: 18px;
+              height: 18px;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin smothScrollAndNoDispalyScroll {
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// colors
+
+$black: #000000;
+$white: #ffffff;
+
+$red700: #9b2c2c;
+$red600: #c53030;
+$red500: #e53e3e;
+$red400: #f56565;
+
+$blue400: #4299e1;
+
+$gray900: #212121;
+$gray700: #2d3748;
+$gray500: #718096;
+$gray100: #cbd5e0;
+
+$padding2: 2px;
+$padding4: 4px;
+$padding6: 6px;
+$padding8: 8px;
+$padding10: 10px;
+$padding12: 12px;
+$padding14: 14px;
+$padding16: 16px;
+$padding18: 18px;
+$padding20: 20px;
+
+$fontFira: "Fira Code", monospace;
+$fontMonts: "Montserrat", sans-serif;

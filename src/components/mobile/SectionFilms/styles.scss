@@ -1,0 +1,20 @@
+@import "../../../styles/imports.scss";
+
+@include for-phone-only {
+  .section-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    strong {
+      text-align: left;
+      padding: 5px;
+      color: $white;
+    }
+  }
+}
+
+@include for-tablet-portrait-up {
+  .section-cards {
+    display: none;
+  }
+}

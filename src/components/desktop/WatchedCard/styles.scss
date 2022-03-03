@@ -1,0 +1,13 @@
+@import "../../../styles/imports.scss";
+
+@include for-tablet-landscape-up {
+  .container-desktop-watched {
+    display: none;
+  }
+}
+
+@include for-desktop-up {
+  .container-desktop-watched {
+    display: flex;
+  }
+}
